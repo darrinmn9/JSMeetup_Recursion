@@ -72,35 +72,3 @@ function factorial(num){
   }
 }
 //visualize factorial(3) http://latentflip.com/loupe/?code=ZnVuY3Rpb24gZmFjdG9yaWFsKG51bSl7DQogIGlmKG51bSA8IDApew0KICAgIHJldHVybiAtMTsNCiAgfWVsc2UgaWYobnVtID09PSAwKXsNCiAgICByZXR1cm4gMTsNCiAgfWVsc2V7DQogICAgcmV0dXJuIChudW0gKiBmYWN0b3JpYWwobnVtIC0gMSkpOw0KICB9DQp9DQoNCmZhY3RvcmlhbCgzKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
-
-
-
-treeCountLeaves = function(startingNode) {
-  // set a counter for # of leafs, to eventually be returned
-  var leafCount = 0;
-
-  //define our recursive function to be called on the root of our tree
-  function traverseTree(node){
-    var children = node.children;
-
-    //iterate through all childNodes within the children array
-    for(var i = 0; i < children.length; i++){
-      //each element in our children array represents a specific child node
-      var childNode = children[i];
-
-      //if a child node has no children, it must be a leaf (leafCount++ and don't recurse)
-      //if it has children, call the function again with childNode as the new root node
-      if(childNode.children.length === 0){
-        leafCount++;
-      }else{
-        traverseTree(childNode);
-      }
-    }
-  }
-
-  //run our recursive function to traverse all nodes
-  traverseTree(startingNode);
-
-  //if leafCount is 0, return 1, otherwise return the leafCount
-  return leafCount === 0 ? 1 : leafCount;
-};
