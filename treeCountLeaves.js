@@ -34,7 +34,7 @@ function treeCountLeaves(startingNode) {
 
 /*
 below is dummy data to test treeCountLeaves
-treeCountLeaves(tree1) should return 4
+treeCountLeaves(tree1) should return 6
 feel free to try it on other nodes
 
          1
