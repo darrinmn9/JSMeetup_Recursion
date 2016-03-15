@@ -84,7 +84,7 @@ treeCountLeaves = function(startingNode) {
       //each element in our children array represents a specific child node
       var childNode = children[i];
 
-      //if a child node has no children, it must be a leaf (leafCount++ and end our function call)
+      //if a child node has no children, it must be a leaf (leafCount++ and don't recurse)
       //if it has children, call the function again with childNode as the new root node
       if(childNode.children.length === 0){
         leafCount++;
