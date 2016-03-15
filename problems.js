@@ -17,7 +17,9 @@ function printSquare(n){
     console.log(squared);
 }
 
-printSquare(4)
+printSquare(4);
+
+
 
 
 /*
@@ -25,13 +27,11 @@ countDownFrom - Iterative Approach
 */
 
 
-function countDownFrom(num){
+function countDownFromIter(num){
   for(var i = 0; num >= i; num = num - 1){
     console.log(num);
   }
 }
-
-
 
 
 /*
@@ -58,8 +58,9 @@ function eat(foods){
     return eat(foods);
   }
 }
-
 // eat(['cookie', 'pizza', 'carrot']);
+
+
 
 function factorial(num){
   if(num < 0){
@@ -70,6 +71,9 @@ function factorial(num){
     return (num * factorial(num - 1));
   }
 }
+//visualize factorial(3) http://latentflip.com/loupe/?code=ZnVuY3Rpb24gZmFjdG9yaWFsKG51bSl7DQogIGlmKG51bSA8IDApew0KICAgIHJldHVybiAtMTsNCiAgfWVsc2UgaWYobnVtID09PSAwKXsNCiAgICByZXR1cm4gMTsNCiAgfWVsc2V7DQogICAgcmV0dXJuIChudW0gKiBmYWN0b3JpYWwobnVtIC0gMSkpOw0KICB9DQp9DQoNCmZhY3RvcmlhbCgzKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+
 
 treeCountLeaves = function(startingNode) {
   // set a counter for # of leafs, to eventually be returned
