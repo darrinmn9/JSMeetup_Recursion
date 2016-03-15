@@ -71,20 +71,28 @@ function factorial(num){
   }
 }
 
-treeCountLeaves = function() {
+treeCountLeaves = function(startingNode) {
+  // set a counter for # of leafs, to eventually be returned
   var leafCount = 0;
 
-  (function recurse(node){
+  function traverseTree(node){
     var children = node.children;
+
     for(var i = 0; i < children.length; i++){
-      if(children[i].children.length === 0){
+      var childNode = children[i];
+
+      if(childNode.children.length === 0){
         leafCount++;
       }else{
-        recurse(children[i]);
+        traverseTree(childNode);
       }
     }
-  })(this);
+  }
+
+  //run our recursive function to traverse all nodes
+  traverseTree(startingNode);
 
 
+  //if leafCount is 0, return 1, otherwise return the leafCount
   return leafCount === 0 ? 1 : leafCount;
 };
