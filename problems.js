@@ -70,3 +70,21 @@ function factorial(num){
     return (num * factorial(num - 1));
   }
 }
+
+treeCountLeaves = function() {
+  var leafCount = 0;
+
+  (function recurse(node){
+    var children = node.children;
+    for(var i = 0; i < children.length; i++){
+      if(children[i].children.length === 0){
+        leafCount++;
+      }else{
+        recurse(children[i]);
+      }
+    }
+  })(this);
+
+
+  return leafCount === 0 ? 1 : leafCount;
+};
